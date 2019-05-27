@@ -1,0 +1,16 @@
+footer {
+    background-image: url("/assets/img/bgbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top: 1px solid #fff;
+}
+
+.footer-container {
+    display: flex;
+    min-height: rem(200);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(#fff, 0.8);
+}

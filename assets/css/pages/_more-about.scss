@@ -1,0 +1,31 @@
+.more-about {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: rem(40);
+    .more-about-container {
+        max-width: 1024px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        p {
+            margin-top: 0;
+        }
+    }
+    h2 {
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: rem(18);
+            background: rgba($accent, 0.5);
+            z-index: -1;
+        }
+    }
+}

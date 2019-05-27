@@ -1,0 +1,102 @@
+// Modules
+@import "modules/variables";
+@import "modules/fonts";
+@import "modules/functions";
+@import "modules/mixins";
+@import "modules/preloader";
+// Pages
+@import "pages/header";
+@import "pages/about";
+@import "pages/projects";
+@import "pages/more-about";
+@import "pages/contact";
+@import "pages/footer";
+@import "pages/thankyou";
+// Tools
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $font-body;
+    background-color: $light;
+    margin: 0;
+    color: $dark;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    position: relative;
+    font-family: $font-headings;
+    font-weight: 700;
+    color: $black;
+}
+
+h2 {
+    font-size: rem(32);
+}
+
+h2.heading {
+    margin-top: rem(80);
+    margin-bottom: rem(60);
+}
+
+p {
+    font-size: rem(18);
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+a.button,
+button.button {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: rem(18) rem(36);
+    color: $accent-red;
+    margin-top: rem(24);
+    border: rem(2) solid $accent-red;
+    text-transform: uppercase;
+    font-size: rem(16);
+    font-weight: 700;
+    font-family: $font-headings;
+    letter-spacing: rem(1);
+    text-decoration: none;
+    box-shadow: $shadow;
+    z-index: 1;
+    transition: all 250ms $transition;
+    &:hover {
+        box-shadow: $shadow-large;
+        transform: translateY(rem(-2));
+        color: $light;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 101%;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        background: rgba($accent-red, 1);
+        transition: all 250ms $transition;
+        z-index: -1;
+    }
+    &:hover:before {
+        transform: scaleY(1);
+    }
+}
+
+a {
+    color: #4D3054;
+    text-transform: uppercase;
+    font: $font-headings;
+    font-size: rem(18);
+}

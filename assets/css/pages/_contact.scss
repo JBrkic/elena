@@ -1,0 +1,168 @@
+.contact {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: rem(80);
+    background-color: $light;
+    h2 {
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: rem(18);
+            background: rgba($accent, 0.5);
+            z-index: -1;
+        }
+    }
+}
+
+.contact-content {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    form {
+        display: flex;
+        flex-flow: column;
+        width: 40%;
+        box-sizing: border-box;
+        padding: 0 rem(40);
+        z-index: 2;
+        input,
+        textarea {
+            width: 100%;
+            margin-bottom: rem(10);
+            font-size: rem(18);
+            font-family: $font-body;
+            padding: rem(10) rem(10);
+            box-sizing: border-box;
+            border: 2px solid rgba($accent, 0);
+            background-color: rgba(#fff, 1);
+            box-shadow: $shadow;
+            color: $dark;
+            transition: all 300ms ease-in-out;
+        }
+         :hover,
+         :focus {
+            box-shadow: $shadow;
+            border-color: rgba($dark, 1);
+            transform: translateY(rem(-2));
+        }
+         :focus {
+            outline: none;
+        }
+        textarea {
+            height: rem(150);
+            width: 100%;
+        }
+    }
+    .button {
+        background-color: transparent;
+    }
+    button.button {
+        margin-bottom: 0;
+        align-self: center;
+        &:hover {
+            color: $light;
+            cursor: pointer;
+        }
+        &:hover,
+        &:focus {
+            border-color: $accent-red;
+        }
+    }
+    .email-me-button-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        padding: rem(40);
+        width: 40%;
+        border: 2px solid rgba($accent-light, 0.2);
+        z-index: 2;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100%;
+            left: 70%;
+            top: 20%;
+            width: 100%;
+            z-index: -2;
+            background-color: rgba($dark, 0.1);
+        }
+        a.button {
+            margin: 0;
+            justify-self: center;
+            margin: 0 auto;
+        }
+    }
+    h4 {
+        margin: 0;
+        text-transform: none;
+        font-size: rem(20);
+        color: $main;
+    }
+    strong {
+        margin: 0 rem(30);
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    .contact-content {
+        form {
+            width: 50%;
+            padding: 0 rem(15);
+        }
+        .email-me-button-container {
+            border-color: $light;
+            width: 50%;
+            padding: rem(15);
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .contact-content {
+        flex-flow: column;
+        form {
+            width: 100%;
+            padding: 0 rem(15);
+            input,
+            textarea {
+                font-size: rem(16);
+            }
+        }
+        .email-me-button-container {
+            text-align: center;
+            border-color: $light;
+            width: 100%;
+            padding: rem(15);
+            margin-bottom: rem(40);
+            p {
+                font-size: rem(16);
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .contact {
+        h2 {
+            font-size: rem(24);
+        }
+    }
+}
